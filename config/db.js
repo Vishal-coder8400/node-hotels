@@ -1,6 +1,7 @@
 const mongoose=require("mongoose")
+require("dotenv").config()
 
-const mongodbUrl="mongodb://127.0.0.1:27017/BtechwalaRestro"
+const mongodbUrl=process.env.DB_URL
 
 mongoose.connect(mongodbUrl,{
     useNewUrlParser:true,
